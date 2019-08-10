@@ -62,7 +62,7 @@ public class Pre_Project2 {
                     System.err.println("- is at an end, which is an invalid case!");
                     System.exit(0);
                 } else { //connect another word in the next line
-                    String postString = scanner.next();
+                    String postString = scanner.next().toLowerCase();
                     nextC = postString.length();
                     nextWord.append(postString);
                 }
