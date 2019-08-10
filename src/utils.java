@@ -10,4 +10,12 @@ public class utils {
     public static boolean isPunctuation(char c) {
         return (c == '!') || (c == '?') || (c == ',') || (c == '.');
     }
+
+    public static String postRev(String s) {
+        String revs = new StringBuffer(s).reverse().toString();
+        if (revs.compareTo(s) > 0) {
+            return s;
+        }
+        return revs;
+    }
 }
