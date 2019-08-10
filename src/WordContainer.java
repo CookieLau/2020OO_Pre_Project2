@@ -1,11 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class WordContainer {
-    private List<String> container;
+    private Set<String> container;
 
     public WordContainer() {
-        container = new ArrayList<>();
+        container = new TreeSet<>();
     }
 
     public boolean addWord(String string) {
@@ -17,5 +18,9 @@ public class WordContainer {
 
     public int getCount() {
         return container.size();
+    }
+
+    public Iterator<String> getIter() {
+        return container.iterator();
     }
 }
