@@ -24,7 +24,7 @@ public class Pre_Project2 {
             lastC = nextC;
             while ((word = getNextWord(lineScanner)) != null) {
                 //System.out.println(word);
-                container.addWord(word, r, c + 1 + lastC);
+                container.addWord(utils.postRev(word), r, c + 1 + lastC);
                 c += word.length();
             }
         }
@@ -62,7 +62,7 @@ public class Pre_Project2 {
                     System.err.println("- is at an end, which is an invalid case!");
                     System.exit(0);
                 } else { //connect another word in the next line
-                    String postString = scanner.next();
+                    String postString = scanner.next().toLowerCase();
                     nextC = postString.length();
                     nextWord.append(postString);
                 }
@@ -80,6 +80,7 @@ public class Pre_Project2 {
             }
             return nextWord.toString();
         }
+        nextC = 0;
         return null;
     }
 }
