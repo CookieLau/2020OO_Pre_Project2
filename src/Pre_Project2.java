@@ -16,7 +16,7 @@ public class Pre_Project2 {
         //System.out.println(container.getCount());
         Iterator<String> wordIter = container.getIter();
         int sumCount = container.getSumCount();
-        DecimalFormat df = new DecimalFormat("#.00%");
+        DecimalFormat df = new DecimalFormat("#0.00%");
         while (wordIter.hasNext()) {
             word = wordIter.next();
             String rate = df.format((float)container.getCount(word)/sumCount);
@@ -36,7 +36,7 @@ public class Pre_Project2 {
                     System.err.println("- is at an end, which is an invalid case!");
                     System.exit(0);
                 } else { //connect another word in the next line
-                    nextWord.append(scanner.next());
+                    nextWord.append(scanner.next().toLowerCase());
                 }
             }
             int length = nextWord.length();
